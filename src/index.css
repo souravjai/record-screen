@@ -1,0 +1,101 @@
+body{
+  margin: 0px;
+  background-color: #121212;
+  box-sizing: border-box;
+  color: white;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  h1{
+    font-family: "Merriweather Sans", serif;
+    font-weight: 800;
+    margin: 5px 0px;
+  }
+  
+
+}
+
+.muted{
+  font-family: "Merriweather Sans", serif;
+  color: grey;
+  margin: 5px 0px;
+}
+
+.container{
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.preview-video{
+  height: 60vh;
+  width: 60vw;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none !important;
+}
+
+.menu_buttons{
+  margin: 1rem 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.menu_buttons img{
+  height: 50px;
+}
+
+.img-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.hoverable,.muted{
+  transition: all 0.2s;
+}
+.hoverable:hover+span{
+  color: white;
+}
+.hoverable:hover{
+  transform: scale(1.1);
+}
+
+.img-button span{
+  font-size: x-small;
+}
+
+@media (max-width: 720px) {
+  .container{
+    flex-direction: column;
+  }
+  .menu_buttons{
+    flex-direction: row;
+  }
+  .preview-video{
+    height: auto;
+    width: 80%;
+  }
+}
